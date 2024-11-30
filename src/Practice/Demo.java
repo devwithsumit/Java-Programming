@@ -3,20 +3,21 @@ package Practice;
 import java.util.*;
 
 public class Demo {
-    public int countAsterisks(String s) {
-        int count = 0;
-        boolean isOutside = true;
-        for (char ch : s.toCharArray()) {
-            if (ch == '|')
-                isOutside = !isOutside;
-
-            if (isOutside && ch == ('*'))
-                count++;
+    public static int percentageLetter(String s, char letter) {
+        int charCount = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == letter) charCount++;
         }
-        return count;
+        System.out.println(charCount);
+        System.out.println(((float)charCount/s.length()) * 100 );
+        int percentage = (int) (((float)charCount/s.length()) * 100);
+        return percentage;
     }
 
     public static void main(String[] args) {
+
+        System.out.println(percentageLetter("foobar", 'o'));
+
         ArrayList<Integer> list1 = new ArrayList<>();
         list1.add(20);
         list1.add(30);
