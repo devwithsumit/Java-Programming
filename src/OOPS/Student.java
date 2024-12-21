@@ -27,6 +27,6 @@ public class Student {
     }
 
     public String toString() {
-        return STR."{Student={ name : \{name}, age : \{age}}";
+        return STR."{Student={name : \{name}, age : \{age}}";
     }
 }
