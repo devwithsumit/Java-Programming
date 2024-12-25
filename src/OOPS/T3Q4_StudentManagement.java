@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StudentManagement {
+public class T3Q4_StudentManagement {
     public static class Student{
         int studentId;
         String name;
@@ -45,7 +45,7 @@ public class StudentManagement {
             percentage = (double) sum /noOfSubs;
         }
         void display(){
-            System.out.println("Student Id: " + studentId);
+            System.out.println("T2_Student Id: " + studentId);
             System.out.println("Name: " + name);
             System.out.println("Age: " + age);
             System.out.println("Grade: " + grade);

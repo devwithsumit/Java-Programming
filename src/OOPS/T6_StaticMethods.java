@@ -1,6 +1,6 @@
 package OOPS;
 // Definition: Methods declared with the static keyword belong to the class, not a specific object.
-public class StaticMethods {
+public class T6_StaticMethods {
     /*Key Features:
       • Can be invoked using the class name.
       • Can access only static fields or methods directly.
@@ -11,7 +11,7 @@ public class StaticMethods {
     }
 
     public static void main(String[] args) {
-        StaticMethods obj = new StaticMethods();
+        T6_StaticMethods obj = new T6_StaticMethods();
         /* If tried to invoke via object's reference then
         reference name will be replaced by class name at runtime.*/
         obj.method1();

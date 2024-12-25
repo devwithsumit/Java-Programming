@@ -1,11 +1,10 @@
 package OOPS;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 
 
-public class Getter_Setter_Equals_Hashcode {
+public class T3_Getter_Setter_Equals_Hashcode {
     static class Demo {
         private String name;
         int age;

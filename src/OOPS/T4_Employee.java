@@ -2,19 +2,19 @@ package OOPS;
 
 import java.util.Scanner;
 
-public class Employee {
+public class T4_Employee {
     String name;
     int salary;
 
     // constructor
-    Employee(int salary,String name){
+    T4_Employee(int salary, String name){
         this.salary = salary;
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "T4_Employee{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
                 '}';
@@ -28,7 +28,7 @@ public class Employee {
         int size = sc.nextInt();
 
         // declaring array of obj
-        Employee[] arr = new Employee[size];
+        T4_Employee[] arr = new T4_Employee[size];
 
         for (int i = 0; i<size;i++){
             sc.nextLine();
@@ -36,11 +36,11 @@ public class Employee {
             String name = sc.nextLine();
             System.out.println("Enter salary: ");
             int salary = sc.nextInt();
-            arr[i] = new Employee(salary,name);
+            arr[i] = new T4_Employee(salary,name);
 
         }
 
-        for (Employee emp : arr){
+        for (T4_Employee emp : arr){
             System.out.println(emp);
         }
 

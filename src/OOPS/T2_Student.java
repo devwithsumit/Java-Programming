@@ -1,6 +1,6 @@
 package OOPS;
 
-public class Student {
+public class T2_Student {
     int age;
     String name;
 
@@ -16,12 +16,12 @@ public class Student {
     }
     // compile time polymorphism
     // constructor overloading
-    Student(){
+    T2_Student(){
 
     }
 
     // constructor initialisation
-    Student(String n, int a) {
+    T2_Student(String n, int a) {
         this.name = n;
         this.age = a;
     }

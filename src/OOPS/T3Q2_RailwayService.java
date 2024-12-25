@@ -2,14 +2,14 @@ package OOPS;
 
 import java.util.Scanner;
 
-public class RailwayService {
+public class T3Q2_RailwayService {
     String name;
     String coach;
     long contact;
     int amount;
     int totalAmount;
 
-    RailwayService(){
+    T3Q2_RailwayService(){
         name = "";
         coach = "";
         contact = 0;
@@ -43,7 +43,7 @@ public class RailwayService {
     }
 
     public static void main(String[] args) {
-        RailwayService r1 = new RailwayService();
+        T3Q2_RailwayService r1 = new T3Q2_RailwayService();
         r1.accept();
         r1.update();
         r1.display();

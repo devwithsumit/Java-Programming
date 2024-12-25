@@ -4,13 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CabService {
+public class T3Q1_CabService {
     String car_type;
     double km;
     double bill;
 
     // constructor
-    public CabService() {
+    public T3Q1_CabService() {
         this.car_type = "";
         this.km = 0;
         this.bill = 0;
@@ -43,7 +43,7 @@ public class CabService {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br =  new BufferedReader(isr);
 
-        CabService s1 = new CabService();
+        T3Q1_CabService s1 = new T3Q1_CabService();
 
         System.out.print("Select the car type: a for AC or n for Non Ac: ");
         String car_type = br.readLine();

@@ -1,10 +1,10 @@
 package OOPS;
 
-public class IntroToOops {
+public class T1_IntroToOops {
     public static void main(String[] args) {
 
 //       1. init via constructor
-        Student obj1  = new Student();
+        T2_Student obj1  = new T2_Student();
 
 //       2. initialization via reference
 //        obj1.name = "Sumit";

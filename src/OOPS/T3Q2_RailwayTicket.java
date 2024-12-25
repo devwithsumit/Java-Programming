@@ -4,17 +4,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class RailwayTicket {
+public class T3Q2_RailwayTicket {
     String name;
     String coach;
     long contact;
     int amount;
     int totalBill;
 
-    public RailwayTicket() {
+    public T3Q2_RailwayTicket() {
     }
 
-    public RailwayTicket(String name, String coach, long contact, int amount, int totalBill) {
+    public T3Q2_RailwayTicket(String name, String coach, long contact, int amount, int totalBill) {
         this.name = name;
         this.coach = coach;
         this.contact = contact;
@@ -71,7 +71,7 @@ public class RailwayTicket {
         int amount = Integer.parseInt(br.readLine());
 
         // creating new ticket object
-        RailwayTicket t1 = new RailwayTicket("name", "coach", 0, 0, 0);
+        T3Q2_RailwayTicket t1 = new T3Q2_RailwayTicket("name", "coach", 0, 0, 0);
         // methods
         t1.accept(name, coach, contact, amount);
         t1.update();
