@@ -9,7 +9,8 @@ import java.util.function.IntToDoubleFunction;
 
 class Demo {
     //    Todo
-//    public static boolean isVowelString(String s) {
+
+    //    public static boolean isVowelString(String s) {
 //        if(s.length() < 5) return false;
 //        Set<Character> vowels = new HashSet<>();
 //        for (char ch : s.toCharArray()) {
@@ -73,44 +74,63 @@ class Demo {
         return ans;
     }
 
-    public static int diagonalSum(int[][] mat) {
-        int sum = 0;
+    public static boolean findRotation(int[][] mat, int[][] target) {
+        int n = mat.length;
+        for (int rotation = 0; rotation < 4; rotation++) {
+
+            if (areMatricesEqual(mat, target)) { // return true if match found
+                return true;
+            }
+            rotate90(mat); // rotate of match not found
+        }
+        // return false if any of the rotated array does not match
+        return false;
+    }
+
+    public static boolean areMatricesEqual(int[][] mat, int[][] target) {
+        if (mat.length != target.length) return false;
+        // check if two 2D arrays are equal or not
         for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat[i].length; j++) {
-                if (i == j) sum += mat[i][j];
-                else if (i + j == mat.length - 1) {
-                    sum += mat[i][j];
+            for (int j = 0; j < mat.length; j++) {
+                if (mat[i][j] != target[i][j]) {
+                    return false;
                 }
             }
         }
-        return mat.length;
+        return true;
+    }
+
+    public static void rotate90(int[][] mat) {
+        int n = mat.length;
+        //Transpose of the matrix (only for n x n )
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int temp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = temp;
+            }
+        }
+        //Reverse each row
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n / 2; j++) {
+                int temp = mat[i][j];
+                mat[i][j] = mat[i][n - j - 1];
+                mat[i][n - j - 1] = temp;
+            }
+        }
     }
 
     public static void main(String[] args) throws IOException {
 
 //        diagonalSum(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
-
-        int[][] image = new int[][]{
-                {1, 1, 0},
-                {1, 0, 1},
-                {0, 0, 0},
+        int[][] mat = new int[][]{
+                {0, 1},
+                {1, 0},
         };
-        int n = image.length;
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= n / 2; j++) {
-                int temp = image[i][j];
-                image[i][j] = image[i][n - j - 1] == 0 ? 1 : 0;
-                image[i][n - j - 1] = temp == 0 ? 1 : 0;
-            }
-        }
-        System.out.println(Arrays.deepToString(image));
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 0; j < n; j++) {
-//                if (image[i][j] == 1) image[i][j] = 0;
-//                else image[i][j] = 1;
-//            }
-//        }
-//        System.out.println(Arrays.deepToString(image));
+        int[][] target = new int[][]{
+                {1, 0},
+                {0, 1},
+        };
+        System.out.println(findRotation(mat, target));
     }
 }
